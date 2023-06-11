@@ -1,0 +1,400 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #d9dcd6;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+h1 {
+    /* display: inline-block; */
+    font-size: 48px;
+    order: 2;
+    /* width: auto; */
+    flex: 1;
+    margin-right: 20px;
+
+}
+
+header {
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #01204e;
+    color: #ffffff;
+    /* position: fixed; */
+    width: auto;
+    z-index: 9;
+    flex-direction: column-reverse;
+
+}
+
+
+/* Start of Nav CSS codes */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    /* float: right; */
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-right: 20px;
+    font-size: 20px;
+    width: auto;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    padding-top: 15px;
+    order: 1;
+    width: auto;
+}
+nav a{
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+
+}
+nav a:hover{
+    color: gold;
+}
+
+/* END of Nav CSS codes */
+
+/* Start of Hero CSS */
+
+.mainhero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    z-index: 1;
+}
+
+.heroheading {
+    position: absolute;
+    /* bottom: 10px; */
+    right: 25px;
+    padding: 10px;
+    font-size: 36px;
+    margin-top: -110px;
+    background-color: gold;
+    z-index: 2;
+}
+
+/* End of Hero CSS */
+
+/* ABOUT ME SECTION */
+
+.about{
+    width: 85%;
+    float: right;
+    padding: 1.5em 2em;
+}
+
+.about p{
+    line-height: 1.5;
+    font-size: 1em;
+}
+
+.sidehead{
+    flex: 0 0 auto;
+    padding: 20px 30px;
+    margin-top: 30px;
+    width: 15%;
+    float: left;
+    border-right: 3px black solid;
+}
+.sidehead h2{
+    padding-top: 10px;
+    font-size: 40px;
+    text-align: right;
+}
+
+/* END OF ABOUT ME SECTION */
+
+
+/* CSS FOR PORTFOLIO SECTION & SIDE */
+
+.container{
+    display: flex;
+   width: 100%;
+}
+
+
+.main-section{
+    flex: 1 1 90%;
+    flex-wrap: wrap;
+    flex: 5;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+}
+
+.main-section section:first-child{
+    flex: 1 0 90%;
+    width: 97%;
+}
+
+.main-section .mern{
+    flex: 1 0 100%;
+    border: white 5px solid;
+    height: 200px;
+    width: 48%;
+    margin: 10px 5px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
+}
+.main-section .details{
+background-color: gold;
+width: 200px;
+max-height: 100px;
+padding: 10px 20px;
+text-align: left;
+margin-top: 65px;
+opacity: 1;
+} 
+
+#item1{
+    background-image: url('../Images/hero-Img.jpeg');
+
+  }
+
+  #item2{
+    background-image: url('../Images/Calculator.avif');
+  }
+  #item3{
+    background-image: url('../Images/Mobile\ App.avif');
+  }
+  #item4{
+    background-image: url('../Images/Pastel.avif');
+  }
+  #item5{
+    background-image: url('../Images/Web\ Design.avif');
+  }
+
+
+
+  .main-section .mern:hover {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+
+
+
+
+
+/* FOOTER CSS */
+
+footer .about{
+padding-top: 80px;
+text-align: center;
+justify-content: flex-end;
+/* float: right; */
+}
+
+footer .sidehead{
+    text-align: left;
+   
+}
+
+footer ul{
+
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 20px;
+    /* width: auto; */
+
+}
+
+footer ul li{
+    padding: 0px 10px;
+    display: inline-block;
+    width: auto;
+   
+
+}
+footer a{
+    padding: 0px 10px;
+    text-decoration: none;
+    text-decoration: underline;
+    color: black;
+}
+
+footer{
+    
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    /* align-items: flex-end;
+    flex-wrap: wrap; */
+}
+
+footer a:hover{
+    color: gold;
+}
+
+/* Media Queries CSS */
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        flex-direction: column-reverse;
+    }
+
+    h1 {
+        font-size: 32px;
+       text-align: center;
+       display: block;
+       order: 1;
+       width: auto;
+       color: gold;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        order: 2;
+        
+    }
+
+    .hero img {
+        height: 200px;
+    }
+
+    .heroheading {
+        font-size: 24px;
+        margin-top: -30px;
+        font-size: 22px;
+    }
+    
+
+    .about {
+        width: 100%;
+        padding: 10px;
+        text-align: justify;
+        order: 1;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 10px 30px;
+      }
+
+    .container {
+        flex-direction: column-reverse;
+        /* padding: 10px 30px; */
+      }
+
+    .sidehead {
+        /* display: none; */
+    width: 100%;
+    text-align: center;
+    order: 2;
+    border-right: none;
+    border-bottom: 3px black solid;
+    padding: 0px 30px;
+    }
+
+    .sidehead h2{
+        float: none;
+        text-align: center;
+    
+    }
+
+    .main-section .mern {
+        width: 100%;
+    }
+
+    .main-section {
+        flex-direction: column-reverse;
+      }
+
+      .main-section section:first-child{
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+        width: auto;
+        padding: 0px 30px;
+        margin-top: -30px;
+      }
+
+      footer .sidehead{
+        order: 2;
+      }
+
+      footer .about{
+        order: 1;
+        padding: 20px 30px;
+        width: auto;
+      }
+
+    footer ul li {
+        padding: 0px 1px;
+        font-size: 14px;
+    }
+}
+
+/* Tablets and Small Laptops */
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+        padding-top: 12px;
+    }
+
+    .hero img {
+        height: 400px;
+    }
+
+    .heroheading {
+        font-size: 30px;
+        margin-top: -80px;
+    }
+
+    .sidehead {
+        display: none;
+    }
+
+    .main-section .mern {
+        width: 100%;
+    }
+
+    footer ul li {
+        padding: 0px 8px;
+    }
+}
+
+
