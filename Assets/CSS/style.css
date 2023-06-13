@@ -15,7 +15,14 @@ body {
     font-size: 48px;
     margin-right: 20px;
 
+}
 
+.mohanimg{
+    display: inline-block;
+    margin-right: 20px;
+    float: left;
+
+    margin-top: -15px;
 }
 
 header {
@@ -251,7 +258,9 @@ footer a:hover{
         padding: 10px;
         flex-direction: column-reverse;
     }
-
+    .mohanimg{
+        display: none;
+    }
     .name {
         font-size: 32px;
        text-align: center;
@@ -360,7 +369,9 @@ footer a:hover{
         flex-direction: column-reverse;
         padding: 20px;
     }
-
+    .mohanimg{
+        display: none;
+    }
     .name {
         text-align: center;
         display: block;
