@@ -10,47 +10,39 @@ body {
 
 }
 
-h1 {
-    /* display: inline-block; */
+.name {
+    display: inline-block;
     font-size: 48px;
-    order: 2;
-    /* width: auto; */
-    flex: 1;
     margin-right: 20px;
+
 
 }
 
 header {
-    display: flex;
+    flex: flex;
+    justify-content: space-between;
     padding: 25px;
     align-items: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #01204e;
     color: #ffffff;
-    /* position: fixed; */
-    width: auto;
-    z-index: 9;
-    flex-direction: column-reverse;
-
 }
-
 
 /* Start of Nav CSS codes */
 nav {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    float: right;
     margin-right: 20px;
-    /* float: right; */
     font-size: 20px;
+    flex: 1;
+    
 }
 
 nav ul {
-    display: flex;
-    justify-content: flex-end;
     list-style-type: none;
-    margin-right: 20px;
-    font-size: 20px;
-    width: auto;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -58,15 +50,15 @@ nav ul li {
     margin: 0 10px;
     padding-top: 15px;
     order: 1;
-    width: auto;
 }
+
 nav a{
     display: flex;
     justify-content: center;
     color: #ffffff;
     text-decoration: none;
-
 }
+
 nav a:hover{
     color: gold;
 }
@@ -244,8 +236,6 @@ footer{
     
     flex-direction: column-reverse;
     justify-content: space-between;
-    /* align-items: flex-end;
-    flex-wrap: wrap; */
 }
 
 footer a:hover{
@@ -257,11 +247,12 @@ footer a:hover{
 /* Mobile Devices */
 @media (max-width: 768px) {
     header {
-        padding: 15px;
+        display: flex;
+        padding: 10px;
         flex-direction: column-reverse;
     }
 
-    h1 {
+    .name {
         font-size: 32px;
        text-align: center;
        display: block;
@@ -271,7 +262,7 @@ footer a:hover{
     }
 
     nav ul li {
-        margin: 0 15px;
+        margin: 0 10px;
         padding-top: 10px;
         margin-bottom: 10px;
         font-size: 14px;
@@ -284,11 +275,14 @@ footer a:hover{
     }
 
     .heroheading {
-        font-size: 24px;
         margin-top: -30px;
         font-size: 22px;
     }
     
+    nav a{
+        padding: 0px;
+        font-size: 12px;
+    }
 
     .about {
         width: 100%;
@@ -305,11 +299,10 @@ footer a:hover{
 
     .container {
         flex-direction: column-reverse;
-        /* padding: 10px 30px; */
       }
 
     .sidehead {
-        /* display: none; */
+
     width: 100%;
     text-align: center;
     order: 2;
@@ -361,18 +354,28 @@ footer a:hover{
 }
 
 /* Tablets and Small Laptops */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 992px) {
     header {
+        display: flex;
+        flex-direction: column-reverse;
         padding: 20px;
     }
 
-    h1 {
-        font-size: 40px;
+    .name {
+        text-align: center;
+        display: block;
+        order: 1;
+        width: auto;
+        color: gold;
+        font-size: 50px;
     }
 
     nav ul li {
         margin: 0 20px;
-        padding-top: 12px;
+        padding-top: 15px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        order: 2;
     }
 
     .hero img {
@@ -380,20 +383,71 @@ footer a:hover{
     }
 
     .heroheading {
-        font-size: 30px;
         margin-top: -80px;
     }
 
-    .sidehead {
-        display: none;
+    .about {
+        width: 100%;
+        padding: 10px;
+        text-align: justify;
+        order: 1;
     }
+
+    .sidehead {
+
+        width: 100%;
+        text-align: center;
+        order: 2;
+        border-right: none;
+        border-bottom: 3px black solid;
+        padding: 0px 30px;
+    }
+
+    .sidehead h2{
+        float: none;
+        text-align: center;
+    
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 10px 30px;
+      }
+
+    .container {
+        flex-direction: column-reverse;
+      }
 
     .main-section .mern {
         width: 100%;
     }
 
+    .main-section section:first-child{
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+        width: auto;
+        padding: 0px 30px;
+        margin-top: -30px;
+      }
+
+      footer .sidehead{
+        order: 2;
+      }
+
+      footer .about{
+        order: 1;
+        padding: 20px 30px;
+        width: auto;
+      }
+
     footer ul li {
-        padding: 0px 8px;
+        padding: 0px 1px;
+        font-size: 14px;
     }
 }
 
